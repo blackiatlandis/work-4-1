@@ -4,10 +4,8 @@ int readLine(char *oneLineString, FILE *inputFilePointer)
 {
     char temporaryCharacter;
     int lengthOfString;
-    for (lengthOfString = 0; !((temporaryCharacter = fgetc(inputFilePointer)) == '\n'); lengthOfString++)
-    {
-        if (temporaryCharacter == EOF)
-        {
+    for (lengthOfString = 0; !((temporaryCharacter = fgetc(inputFilePointer)) == '\n'); lengthOfString++) {
+        if (temporaryCharacter == EOF) {
             lengthOfString = -1;
             break;
         }
@@ -22,8 +20,7 @@ void turnArr(char *oneLineString, int lengthOfString)
 {
     int a = lengthOfString / 2;
     char temporaryCharacter;
-    for (int i = 0; i < a; i++)
-    {
+    for (int i = 0; i < a; i++) {
         temporaryCharacter = oneLineString[i];
         oneLineString[i] = oneLineString[lengthOfString - 1 - i];
         oneLineString[lengthOfString - 1 - i] = temporaryCharacter;

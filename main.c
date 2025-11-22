@@ -7,8 +7,7 @@ int main()
     int lengthOfString;
     char oneLineString[LEN_MAX];
     FILE *inputFilePointer = fopen("input.txt", "r");
-    while ((lengthOfString = readLine(oneLineString, inputFilePointer)) != -1)
-    {
+    while ((lengthOfString = readLine(oneLineString, inputFilePointer)) != -1) {
         turnArr(oneLineString, lengthOfString);
         printArr(oneLineString, lengthOfString);
     }
